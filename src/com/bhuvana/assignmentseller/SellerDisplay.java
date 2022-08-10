@@ -8,8 +8,8 @@ public class SellerDisplay {
 		// TODO Auto-generated method stub
 		SellerConsole sc = new SellerConsole();
 		
-		sc.populateRecords();
-		sc.displayAllSellers();
+		sc.sellersData();
+		sc.displayingAllSellers();
 		
 		@SuppressWarnings("resource")
 		Scanner scs = new Scanner(System.in);
@@ -22,14 +22,14 @@ public class SellerDisplay {
 		switch(s){
 			
 			case 1:
-				sc.addSeller(25, "bhuvana", "bhuvana@gmail.com", "vizag");
+				sc.addingNewSeller(25, "bhuvana", "bhuvana@gmail.com", "vizag");
 				break;
 			
 			case 2:
-				sc.deleteById(3);
+				sc.deletingBySellerId(3);
 				break;
 			case 3:
-				sc.updateById(4, "chandra", "hyd", "chandra@gamil.com");
+				sc.updatingById(4, "chandra", "hyd", "chandra@gamil.com");
 				break;
 			case 4:
 				sc.displayByLocation("Chennai");

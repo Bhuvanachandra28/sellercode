@@ -8,7 +8,7 @@ public class SellerConsole {
 
 	List <SellerOutlet> sellerNames = new ArrayList <SellerOutlet> ();
 	
-	public void populateRecords() {
+	public void sellersData() {
 		sellerNames.add(new SellerOutlet(0, "bhuvanachandra", "bchndra@gmail.com", "Vizag"));
 		sellerNames.add(new SellerOutlet(1, "raja ravindra", "raja@gmail.com", "Chennai"));
 		sellerNames.add(new SellerOutlet(2, "raja ", "raj@gmail.com", "Hyderabad"));
@@ -17,22 +17,22 @@ public class SellerConsole {
 		sellerNames.add(new SellerOutlet(5, "suresh", "suresh@gmail.com", "Chennai"));
 	}
 	
-	public void addSeller(int sellerid, String sellername, String location, String selleremail) {
+	public void addingNewSeller(int sellerid, String sellername, String location, String selleremail) {
 		sellerNames.add(new SellerOutlet(sellerid, sellername, location, selleremail));
 		System.out.println("A new was Seller Added");
 	}
 	
-	public void displayAllSellers() {
+	public void displayingAllSellers() {
 		sellerNames.stream().forEach((seller) -> System.out.println(seller));
 	}
 	
-	public void searchById(int id) {
+	public void searchingBySellerId(int id) {
 		sellerNames.stream()
 		.filter((seller) -> id == seller.getId())
 		.forEach((seller) -> System.out.println(seller));
 	}
 	
-	public void deleteById(int id) {
+	public void deletingBySellerId(int id) {
 		
 		sellerNames =  sellerNames.stream()
 		.filter((seller) -> id != seller.getId())
@@ -42,7 +42,7 @@ public class SellerConsole {
 		.forEach((seller) -> System.out.println(seller));
 	}
 	
-	public void updateById(int id, String name, String location, String email) {
+	public void updatingById(int id, String name, String location, String email) {
 		sellerNames.stream()
 		.filter((seller) -> id == seller.getId())
 		.forEach((seller) -> {
